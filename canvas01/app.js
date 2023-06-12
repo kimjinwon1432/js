@@ -86,3 +86,5 @@ ctx.fillStyle = "white";
 ctx.arc(567, 200, 15, 1 * Math.PI, 2 * Math.PI);
 ctx.arc(607, 200, 15, 1 * Math.PI, 2 * Math.PI);
 ctx.fill();
+
+// ctx.stroke();
