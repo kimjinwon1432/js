@@ -9,3 +9,22 @@ canvas {
   border: 1px solid #000000;
   margin: 20px;
 }
+.color-option {
+  width: 60px;
+  height: 30px;
+}
+input[type="color"] {
+  width: 60px;
+  height: 30px;
+}
+
+#btnBox {
+  padding-top: 10px;
+}
+button {
+  width: 60px;
+  height: 30px;
+}
+input[type="range"] {
+  appearance: slider-vertical;
+}
