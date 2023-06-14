@@ -28,6 +28,7 @@ ctx.lineWidth = lineWidth.value;
 let isPainting = false;
 let isFilling = false;
 
+// rangd의 색상 변경
 lineWidth.style.accentColor = color.value;
 
 function onMove(mouse) {
