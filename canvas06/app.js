@@ -4,6 +4,7 @@ file 첨부
 
 text추가(더블클릭 시)
 */
+const saveBtn = document.getElementById("save");
 const textInput = document.getElementById("text");
 const fileInput = document.getElementById("file");
 const eraserBtn = document.getElementById("eraser-btn");
@@ -88,6 +89,7 @@ function onCanvasClick(e) {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
 }
+
 function onEraserClick(e) {
   ctx.strokeStyle = "white";
   lineWidth.style.accentColor = ctx.strokeStyle;
@@ -104,7 +106,7 @@ function onFileChange(e){
   const url = URL.createObjectURL(file);
   // console.log(url); //blob:http://127.0.0.1:5500/07ee8a3e-55b3-48ab-a607-0f049a9591a0
   
-  //img태그 생성
+  //img태그 생성 //docume nt.createElement("img")
   const img = new Image(); // <img src=""/> 와 동일
   img.src = url;
   //img가 로드됬을 때 실행됨
@@ -133,6 +135,14 @@ function onDoubleclick(e) {
     ctx.restore();
   }
 }
+function onSaveClick(e){
+  const url = canvas.toDataURL(); //canvas에 그린 그림을 url로 인코딩
+  //<a href="" download > a태그의 download 옵션 사용
+  const a= document.createElement("a"); 
+  a.href=url;
+  a.download = "myDrawing.png";
+  a.click();
+}
 // 이벤트 추가하는 다른 방법
 // canvas.onmousemove = function(){}
 canvas.addEventListener("mouseup", onMouseUp);
@@ -154,4 +164,4 @@ modeBtn.addEventListener("click", onModeBtnClick);
 destroyBtn.addEventListener("click", onDestroyBtnClick);
 eraserBtn.addEventListener("click", onEraserClick);
 fileInput.addEventListener("change", onFileChange);
-
+saveBtn.addEventListener("click", onSaveClick)
