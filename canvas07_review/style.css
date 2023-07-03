@@ -1,0 +1,29 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas{
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+    margin: 20px;
+}
+#color-control{
+    align-items: center;
+}
+.color-option{
+    width: 60px;
+    height: 30px;
+    border:0.2px solid black;
+}
+input[type="color"]{
+    width: 60px;
+    height:30px;
+}
+button{
+    width: 65px;
+    height: 30px;
+}
